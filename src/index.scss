@@ -1,0 +1,150 @@
+@import './scss/fonts', './scss/variables', './scss/mixin', './scss/reset';
+// @import './scss/variables', './scss/mixin', './scss/reset';
+
+html {
+  font-size: 62.5%;
+
+  @include max-screen(1024px) {
+    font-size: 56.5%;
+  }
+
+  @include max-screen(800px) {
+    font-size: 50.5%;
+  }
+
+  @include max-screen(640px) {
+    font-size: 44.5%;
+  }
+
+  @include max-screen(550px) {
+    font-size: 41.5%;
+  }
+
+  @include max-screen(440px) {
+    font-size: 37.5%;
+  }
+
+  @include max-screen(400px) {
+    font-size: 35.5%;
+  }
+}
+input, textarea, select, button {
+  font: 100% $Acumin;
+}
+body {
+  // font-family: $tk-museo-sans;
+  font-family: $Acumin;
+  font-size: $text-r;
+  font-weight: $fw4;
+  line-height: 1.2;
+  color: $dark3;
+  margin: 0;
+  min-width: 320px;
+  background-color: $white1;
+}
+.wrapper {
+  @include flex($dir: column);
+  min-height: 100vh;
+}
+.main {
+  flex: 1 0;
+  @include flex($wrap: wrap);
+}
+:-moz-placeholder {
+  color: rgba($color: $dark0, $alpha: .5);
+  transition: color 0.3s;
+}
+::-moz-placeholder {
+  color: rgba($color: $dark0, $alpha: .5);
+  transition: color 0.3s;
+}
+::-webkit-input-placeholder {
+  color: rgba($color: $dark0, $alpha: .5);
+  transition: color 0.3s;
+}
+:-ms-input-placeholder {
+  color: rgba($color: $dark0, $alpha: .5);
+  transition: color 0.3s;
+}
+::placeholder {
+  color: rgba($color: $dark0, $alpha: .5);
+  transition: color 0.3s;
+}
+
+:focus:-moz-placeholder {
+  color: transparent;
+}
+:focus::-moz-placeholder {
+  color: transparent;
+}
+:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+:focus:-ms-input-placeholder {
+  color: transparent;
+}
+:focus::placeholder {
+  color: transparent;
+}
+h1,h2 {
+  font-family: $ReplRegular;
+}
+h3, h4 {
+  font-family: $ReplBold;
+}
+h1 {
+  font-size: $title-l;
+}
+h2 {
+  font-size: $title-m;
+}
+h3 {
+  font-size: $title-m1;
+}
+.svg-icon {
+	width: 1em;
+	height: 1em;
+	display: block;
+	fill: currentColor;
+}
+.active {
+  pointer-events: none;
+}
+.disabled {
+  opacity: 0.5;
+}
+.cards {
+  @include flex($wrap: wrap, $align: flex-start);
+}
+.link {
+  color: $orange2;
+  text-transform: uppercase;
+  @include min-screen(1024px) {
+    &:hover {
+      color: $orange3;
+    }
+  }
+}
+.justify-holder {
+  @include flex($just: space-between, $align: center);
+}
+.text {
+  &_strong {
+    font-weight: $fw7;
+  }
+  &_regular {
+    font-weight: $fw4;
+  }
+  &_uppercase {
+    text-transform: uppercase;
+  }
+  &_center {
+    text-align: center;
+  }
+  &_justify {
+    text-align: justify;
+  }
+  &_right {
+    text-align: right;
+  }
+}
